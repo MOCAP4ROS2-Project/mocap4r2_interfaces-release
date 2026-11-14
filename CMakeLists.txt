@@ -1,30 +1,33 @@
-cmake_minimum_required(VERSION 3.5)
-project(mocap4r2_msgs)
+cmake_minimum_required(VERSION 3.10)
+project(mocap4r2_interfaces)
 
-find_package(ament_cmake)
+find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
-
-set(msg_files
-  "msg/Marker.msg"
-  "msg/Markers.msg"
-  "msg/ImusInfo.msg"
-  "msg/RigidBody.msg"
-  "msg/RigidBodies.msg"
-  "srv/CreateRigidBody.srv"
-)
+find_package(lifecycle_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  ${msg_files}
-  DEPENDENCIES builtin_interfaces std_msgs geometry_msgs
+  "msg/Marker.msg"
+  "msg/Markers.msg"
+  "msg/RigidBody.msg"
+  "msg/RigidBodies.msg"
+  "msg/Segment.msg"
+  "msg/Skeleton.msg"
+  "msg/Skeletons.msg"
+  "msg/MocapSystemInfo.msg"
+  "msg/Control.msg"
+  "msg/ControlAck.msg"
+  "msg/TrajectoryError.msg"
+  "srv/SetOrigin.srv"
+  DEPENDENCIES builtin_interfaces geometry_msgs lifecycle_msgs std_msgs
 )
 
-install(
-  FILES mocap4r2_bridge_mapping_rule.yaml
-  DESTINATION share/${PROJECT_NAME}
-)
+if(BUILD_TESTING)
+  find_package(ament_lint_auto REQUIRED)
+  ament_lint_auto_find_test_dependencies()
+endif()
 
-ament_export_dependencies(rosidl_default_runtime std_msgs geometry_msgs)
+ament_export_dependencies(rosidl_default_runtime)
 ament_package()

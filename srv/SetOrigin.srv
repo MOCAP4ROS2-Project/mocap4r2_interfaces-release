@@ -1,0 +1,8 @@
+# Set the origin of a ground-truth frame.
+# If use_current is true, the current pose becomes the origin and origin is ignored.
+
+bool use_current
+geometry_msgs/Pose origin
+---
+bool success
+string message

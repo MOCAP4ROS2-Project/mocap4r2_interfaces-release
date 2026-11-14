@@ -1,6 +1,19 @@
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Changelog for package mocap4r2_msgs
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Changelog for package mocap4r2_interfaces
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+2.0.0 (2026-11-14)
+------------------
+* The package is renamed mocap4r2_msgs -> mocap4r2_interfaces (repository too).
+* Marker: stable id from the mocap system (UNKNOWN_ID for unlabeled), name, occlusion flag and residual.
+* RigidBody: id, name, tracking_valid, pose, mean_error and its own markers.
+* Markers, RigidBodies and the new Skeletons (Skeleton, Segment) share the frame number of the mocap system.
+* MocapSystemInfo announces each system: type, frame, rate, lifecycle state, session and topics with types.
+* Control and ControlAck: start/stop requests with request and session ids, answered with success and reason.
+* SetOrigin service and TrajectoryError message for ground truth.
+* Removed ImusInfo, CreateRigidBody and the ros1_bridge mapping.
+* Builds on Humble, Jazzy, Kilted, Lyrical and Rolling from one branch.
+* Contributors: Francisco Martín Rico
 
 0.2.0 (2025-11-19)
 ------------------

@@ -1,3 +1,6 @@
+# All rigid bodies of one mocap frame.
+
 std_msgs/Header header
-uint32 frame_number
-mocap4r2_msgs/RigidBody[] rigidbodies
+# Frame number reported by the mocap system (shared with Markers/Skeletons of the same frame).
+uint64 frame_number
+RigidBody[] rigid_bodies
