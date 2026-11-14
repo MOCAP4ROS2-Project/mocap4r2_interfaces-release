@@ -1,3 +1,26 @@
+## mocap4r2_interfaces (humble) - 2.0.0-1
+
+The packages in the `mocap4r2_interfaces` repository were released into the `humble` distro by running `/usr/bin/bloom-release --rosdistro humble --track humble mocap4r2_interfaces --edit --no-pull-request --override-release-repository-url https://github.com/MOCAP4ROS2-Project/mocap4r2_interfaces-release.git` on `Sat, 14 Nov 2026 17:34:05 -0000`
+
+The `mocap4r2_interfaces` package was released.
+
+Version of package(s) in repository `mocap4r2_interfaces`:
+
+- upstream repository: https://github.com/MOCAP4ROS2-Project/mocap4r2_interfaces.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `0.0.6-2`
+- new version: `2.0.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.14.4`
+- catkin_pkg version: `1.1.1`
+- rosdep version: `0.27.0`
+- rosdistro version: `1.1.0`
+- vcstools version: `0.1.42`
+
+
 ## mocap4r2_msgs (kilted) - 0.2.0-1
 
 The packages in the `mocap4r2_msgs` repository were released into the `kilted` distro by running `/usr/bin/bloom-release --rosdistro kilted --track kilted mocap4r2_msgs` on `Wed, 19 Nov 2025 06:26:17 -0000`
